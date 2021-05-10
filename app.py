@@ -13,7 +13,7 @@ def hello():
 def message():
     request_data = request.get_json()
     name = request_data['name']
-    return jsonify({'message': 'Hello ' + name})
+    return jsonify({'message': 'Hello ' + name + ' Welcome!'})
 
 
 if __name__ == '__main__':
