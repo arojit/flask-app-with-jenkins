@@ -15,6 +15,6 @@ def test_get_message(app, client):
 
     assert response.content_type == mimetype
     expected = {
-        'message': 'Hello ' + name
+        'message': 'Hello ' + name + ' Welcome!'
     }
     assert expected == json.loads(response.get_data())
