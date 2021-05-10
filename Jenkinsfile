@@ -18,4 +18,3 @@ node {
         sh 'docker run -p 5000:5000 -d arojit007/flask-web-app:1.0.0'
     }
 }
-}
