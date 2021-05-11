@@ -14,11 +14,12 @@ node {
         sh 'docker push arojit007/flask-web-app:1.0.0'
     }
 
-    stage('Shut Down Container on Dev Server'){
+    stage('Stop and Remove Container on Dev Server'){
         sh 'docker run -p 5000:5000 -d --name flask-web-app arojit007/flask-web-app:1.0.0'
+        sh 'docker rm flask-web-app'
     }
 
     stage('Run Container on Dev Server'){
-        sh 'docker run -p 5000:5000 -d --name flask1 arojit007/flask-web-app:1.0.0'
+        sh 'docker run -p 5000:5000 -d --name flask-web-app arojit007/flask-web-app:1.0.0'
     }
 }
