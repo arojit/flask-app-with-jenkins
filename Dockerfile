@@ -7,6 +7,8 @@ WORKDIR /app
 
 RUN pip3 install -r requirements.txt
 
+RUN pytest -v --junitxml=reports/result.xml
+
 COPY . /app
 
 EXPOSE 5000
