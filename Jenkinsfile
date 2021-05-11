@@ -15,7 +15,7 @@ node {
     }
 
     stage('Stop and Remove Container on Dev Server'){
-        sh 'docker run -p 5000:5000 -d --name flask-web-app arojit007/flask-web-app:1.0.0'
+        sh 'docker stop flask-web-app'
         sh 'docker rm flask-web-app'
     }
 
